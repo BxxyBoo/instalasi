@@ -48,7 +48,7 @@ sleep 2
 ipsaya=$(curl -sS ipv4.icanhazip.com)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/josinuye/permission/main/ip"
+data_ip="https://raw.githubusercontent.com/BxxyBoo/permission/main/ip"
 checking_sc() {
   useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
   if [[ $date_list < $useexp ]]; then
@@ -117,7 +117,7 @@ apt install lolcat -y
 apt install wondershaper -y
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/josinuye/instalasi/main/"
+    REPO="https://raw.githubusercontent.com/BxxyBoo/instalasi/main/"
 
 ####
 start=$(date +%s)
@@ -287,7 +287,7 @@ restart_system(){
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m" 
 clear
-izinsc="https://raw.githubusercontent.com/josinuye/permission/main/ip"
+izinsc="https://raw.githubusercontent.com/BxxyBoo/permission/main/ip"
 # USERNAME
 rm -f /usr/bin/user
 username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
@@ -569,7 +569,7 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Memasang Service Limit IP & Quota"
-wget -q https://raw.githubusercontent.com/josinuye/instalasi/main/config/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
+wget -q https://raw.githubusercontent.com/BxxyBoo/instalasi/main/config/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
 
 # // Installing UDP Mini
 mkdir -p /usr/local/kyt/
@@ -791,7 +791,7 @@ print_success "ePro WebSocket Proxy"
 }
 function noobzvpn(){
 clear
-wget --no-check-certificate https://raw.githubusercontent.com/josinuye/instalasi/main/noobzvpns.zip
+wget --no-check-certificate https://raw.githubusercontent.com/BxxyBoo/instalasi/main/noobzvpns.zip
 unzip noobzvpns.zip
 cd noobzvpns
 bash install.sh
@@ -918,7 +918,7 @@ cd
 
     clear
     print_install "Memasang Menu Packet"
-    wget https://raw.githubusercontent.com/josinuye/instalasi/main/menu/menu.zip
+    wget https://raw.githubusercontent.com/BxxyBoo/instalasi/main/menu/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
